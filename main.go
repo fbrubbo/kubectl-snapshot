@@ -11,8 +11,8 @@ import (
 	"time"
 )
 
-const version = "0.1.5"
-const versionDesciption = "Get Lifecycle PreStop, Rediness Probe and Liveness Probe"
+const version = "0.1.0"
+const versionDesciption = "Initial Version"
 
 // TODO: sort-by ? How to handle the below scenarios?
 func main() {
