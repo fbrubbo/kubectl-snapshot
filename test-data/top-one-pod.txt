@@ -1,0 +1,2 @@
+config-management-system   git-policy-importer-74875c4577-h7mgd                        git-sync                             28m    9Mi     
+config-management-system   git-policy-importer-74875c4577-h7mgd                        policy-importer                      4m     16Mi    

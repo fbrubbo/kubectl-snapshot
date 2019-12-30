@@ -1,0 +1,355 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Node",
+            "metadata": {
+                "annotations": {
+                    "container.googleapis.com/instance_id": "6200610653548033464",
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "creationTimestamp": "2019-10-03T14:54:04Z",
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/fluentd-ds-ready": "true",
+                    "beta.kubernetes.io/instance-type": "n1-highmem-8",
+                    "beta.kubernetes.io/os": "linux",
+                    "cloud.google.com/gke-nodepool": "pool-1",
+                    "cloud.google.com/gke-os-distribution": "cos",
+                    "failure-domain.beta.kubernetes.io/region": "us-central1",
+                    "failure-domain.beta.kubernetes.io/zone": "us-central1-b",
+                    "kubernetes.io/hostname": "gke-central-pool-1-47d730e3-sh01"
+                },
+                "name": "gke-central-pool-1-47d730e3-sh01",
+                "resourceVersion": "53213359",
+                "selfLink": "/api/v1/nodes/gke-central-pool-1-47d730e3-sh01",
+                "uid": "a4a5ca5e-e5ed-11e9-8ae7-42010af000c4"
+            },
+            "spec": {
+                "podCIDR": "10.40.2.0/24",
+                "providerID": "gce://rubbo-adk-prod/us-central1-b/gke-central-pool-1-47d730e3-sh01"
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "10.128.0.60",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "34.67.185.67",
+                        "type": "ExternalIP"
+                    },
+                    {
+                        "address": "gke-central-pool-1-47d730e3-sh01.c.rubbo-adk-prod.internal",
+                        "type": "InternalDNS"
+                    },
+                    {
+                        "address": "gke-central-pool-1-47d730e3-sh01.c.rubbo-adk-prod.internal",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "attachable-volumes-gce-pd": "128",
+                    "cpu": "7910m",
+                    "ephemeral-storage": "47093746742",
+                    "hugepages-2Mi": "0",
+                    "memory": "48536540Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "attachable-volumes-gce-pd": "128",
+                    "cpu": "8",
+                    "ephemeral-storage": "98868448Ki",
+                    "hugepages-2Mi": "0",
+                    "memory": "53588956Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "lastHeartbeatTime": "2019-11-16T08:55:27Z",
+                        "lastTransitionTime": "2019-10-03T14:53:41Z",
+                        "message": "kernel has no deadlock",
+                        "reason": "KernelHasNoDeadlock",
+                        "status": "False",
+                        "type": "KernelDeadlock"
+                    },
+                    {
+                        "lastHeartbeatTime": "2019-11-16T08:55:27Z",
+                        "lastTransitionTime": "2019-10-03T14:53:41Z",
+                        "message": "Filesystem is not read-only",
+                        "reason": "FilesystemIsNotReadOnly",
+                        "status": "False",
+                        "type": "ReadonlyFilesystem"
+                    },
+                    {
+                        "lastHeartbeatTime": "2019-11-16T08:55:27Z",
+                        "lastTransitionTime": "2019-10-03T14:58:42Z",
+                        "message": "docker overlay2 is functioning properly",
+                        "reason": "CorruptDockerOverlay2",
+                        "status": "False",
+                        "type": "CorruptDockerOverlay2"
+                    },
+                    {
+                        "lastHeartbeatTime": "2019-11-16T08:55:27Z",
+                        "lastTransitionTime": "2019-10-03T14:58:42Z",
+                        "message": "kubelet is functioning properly",
+                        "reason": "FrequentKubeletRestart",
+                        "status": "False",
+                        "type": "FrequentKubeletRestart"
+                    },
+                    {
+                        "lastHeartbeatTime": "2019-11-16T08:55:27Z",
+                        "lastTransitionTime": "2019-10-03T14:58:43Z",
+                        "message": "docker is functioning properly",
+                        "reason": "FrequentDockerRestart",
+                        "status": "False",
+                        "type": "FrequentDockerRestart"
+                    },
+                    {
+                        "lastHeartbeatTime": "2019-11-16T08:55:27Z",
+                        "lastTransitionTime": "2019-10-03T14:58:44Z",
+                        "message": "containerd is functioning properly",
+                        "reason": "FrequentContainerdRestart",
+                        "status": "False",
+                        "type": "FrequentContainerdRestart"
+                    },
+                    {
+                        "lastHeartbeatTime": "2019-11-16T08:55:27Z",
+                        "lastTransitionTime": "2019-10-03T14:58:42Z",
+                        "message": "node is functioning properly",
+                        "reason": "UnregisterNetDevice",
+                        "status": "False",
+                        "type": "FrequentUnregisterNetDevice"
+                    },
+                    {
+                        "lastHeartbeatTime": "2019-11-15T06:06:50Z",
+                        "lastTransitionTime": "2019-11-15T06:06:50Z",
+                        "message": "NodeController create implicit route",
+                        "reason": "RouteCreated",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "lastHeartbeatTime": "2019-11-16T08:55:25Z",
+                        "lastTransitionTime": "2019-10-03T14:54:04Z",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2019-11-16T08:55:25Z",
+                        "lastTransitionTime": "2019-10-03T14:54:04Z",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2019-11-16T08:55:25Z",
+                        "lastTransitionTime": "2019-10-03T14:54:04Z",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2019-11-16T08:55:25Z",
+                        "lastTransitionTime": "2019-10-03T14:54:04Z",
+                        "message": "kubelet is posting ready status. AppArmor enabled",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "daemonEndpoints": {
+                    "kubeletEndpoint": {
+                        "Port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "gcr.io/rubbo-adk-prod/python-hello-world@sha256:7197ab9e4f7330c992791dc8295935e6bc1954239154e80a8650433c19130190"
+                        ],
+                        "sizeBytes": 959289244
+                    },
+                    {
+                        "names": [
+                            "gcr.io/rubbo-adk-prod/python-hello-world@sha256:a6c68734a12766c6cfc6d5c34c2703e4532d838c32043d4009c959661bd8bad0"
+                        ],
+                        "sizeBytes": 959289236
+                    },
+                    {
+                        "names": [
+                            "gcr.io/stackdriver-agents/stackdriver-logging-agent@sha256:79ddc530f0e558da80c3857c2e02d8b6dcce64c4c875fb94e3a420f53c502492",
+                            "gcr.io/stackdriver-agents/stackdriver-logging-agent:1.6.17-16060"
+                        ],
+                        "sizeBytes": 413364992
+                    },
+                    {
+                        "names": [
+                            "gcr.io/rubbo-adk-prod/recommendationservice@sha256:b2278fa0354ac5793e362b28884d3bbefcba69728141d745691ee521751da8dd"
+                        ],
+                        "sizeBytes": 377854647
+                    },
+                    {
+                        "names": [
+                            "gcr.io/rubbo-adk-prod/adservice@sha256:2d8330e08f376f9a7c853cee87886c56c03177ff2af829e5833c1dbdedfbd575"
+                        ],
+                        "sizeBytes": 370536817
+                    },
+                    {
+                        "names": [
+                            "istio/proxyv2@sha256:eb07011ed86002e96ba5a0df0c26e9cffdf0dfc0bbfee09b4e507dd561dc1b82",
+                            "istio/proxyv2:1.1.4"
+                        ],
+                        "sizeBytes": 367130696
+                    },
+                    {
+                        "names": [
+                            "gcr.io/rubbo-adk-prod/emailservice@sha256:c54bf4bebecc82aee0184404fd836442c084efd6c602563b454390142a35fe7b"
+                        ],
+                        "sizeBytes": 340520297
+                    },
+                    {
+                        "names": [
+                            "istio/galley@sha256:d6ec794a635942c3d728fca24ade624b561a96fb6767bbf8a7651ad40508aae2",
+                            "istio/galley:1.1.4"
+                        ],
+                        "sizeBytes": 317323444
+                    },
+                    {
+                        "names": [
+                            "kiali/kiali@sha256:6b332f75d5d5d5b4cbd3ecb627230aa8394970b13ee35c14b0812fc4eb743342",
+                            "kiali/kiali:v0.16"
+                        ],
+                        "sizeBytes": 312065152
+                    },
+                    {
+                        "names": [
+                            "istio/pilot@sha256:31ef6838418438aa1d10f5b3f486188beede0bfebae92cbf895f28b57f4f6d67",
+                            "istio/pilot:1.1.4"
+                        ],
+                        "sizeBytes": 306479207
+                    },
+                    {
+                        "names": [
+                            "istio/coredns-plugin@sha256:964eca01e487bcedcc769dd22644a4272daebf079b64170dd6bab16662651b99",
+                            "istio/coredns-plugin:0.2-istio-1.1"
+                        ],
+                        "sizeBytes": 305561556
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/node-problem-detector@sha256:f95cab985c26b2f46e9bd43283e0bfa88860c14e0fb0649266babe8b65e9eb2b",
+                            "k8s.gcr.io/node-problem-detector:v0.4.1"
+                        ],
+                        "sizeBytes": 286572743
+                    },
+                    {
+                        "names": [
+                            "gcr.io/nomos-release/nomos@sha256:127980af3f5ff843e119a189001ed81e306d857bf780ad93f84682cbaed59ad2",
+                            "gcr.io/nomos-release/nomos:v0.13.0-rc.1"
+                        ],
+                        "sizeBytes": 284922116
+                    },
+                    {
+                        "names": [
+                            "gcr.io/stackdriver-agents/stackdriver-logging-agent@sha256:3883a79e44b1e88c786eed4ca8cf14fbd552e5997403535bc1fdf6128d7de1de",
+                            "gcr.io/stackdriver-agents/stackdriver-logging-agent:1.6.14"
+                        ],
+                        "sizeBytes": 238966394
+                    },
+                    {
+                        "names": [
+                            "gcr.io/rubbo-adk-prod/loadgenerator@sha256:530fe830329c1970a1cb4f7e75d61fcff5e2f80a52c8497de1d55c9471122f27"
+                        ],
+                        "sizeBytes": 230790626
+                    },
+                    {
+                        "names": [
+                            "gcr.io/rubbo-adk-prod/paymentservice@sha256:96dc6255c34e8e053829183158b079bd9575ca24febe4e0e9bd89841659e6d94"
+                        ],
+                        "sizeBytes": 160750990
+                    },
+                    {
+                        "names": [
+                            "gcr.io/rubbo-adk-prod/currencyservice@sha256:09d737dfc0a65644647deb7a6c9e3b3a821ff98812f464a007ebe136aa0fb062"
+                        ],
+                        "sizeBytes": 159192563
+                    },
+                    {
+                        "names": [
+                            "gcr.io/nomos-release/git-sync@sha256:c631442af089c0a074d1b05834b6f8076eb83b0b0ac0d55c8de6d326b921b160",
+                            "gcr.io/nomos-release/git-sync:v3.0.1-gke.1__linux_amd64"
+                        ],
+                        "sizeBytes": 154857292
+                    },
+                    {
+                        "names": [
+                            "gcr.io/csm-alpha-images/csm-sync-agent@sha256:c43a025618ede04cc9c34ad1afa2ff40465dbb54336ffafc48990338edfd1556",
+                            "gcr.io/csm-alpha-images/csm-sync-agent:0.1-alpha13"
+                        ],
+                        "sizeBytes": 154261071
+                    },
+                    {
+                        "names": [
+                            "gcr.io/rubbo-adk-prod/cartservice@sha256:6419a188fd131078bb4618f47755ea2316df409dec474c45964eeeabeed730cd"
+                        ],
+                        "sizeBytes": 154063479
+                    },
+                    {
+                        "names": [
+                            "istio/proxy_init@sha256:1610db1c345bf6463de1e41da2145c7230caeea170888dfba1d0f9c53a1c95aa",
+                            "istio/proxy_init:1.1.4"
+                        ],
+                        "sizeBytes": 152067664
+                    },
+                    {
+                        "names": [
+                            "quay.io/fluentd_elasticsearch/fluentd@sha256:85556f2cc05c2735d89adb5d0e0d965890995b7b333a672a684ff119ebeeba1a",
+                            "quay.io/fluentd_elasticsearch/fluentd:latest"
+                        ],
+                        "sizeBytes": 140076406
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/fluentd-elasticsearch@sha256:a54e7a450c0bdd19f49f56e487427a08c50f99ea8f8846179acf7d4182ce1fc0",
+                            "k8s.gcr.io/fluentd-elasticsearch:v2.2.0"
+                        ],
+                        "sizeBytes": 138313727
+                    },
+                    {
+                        "names": [
+                            "k8s.gcr.io/kubernetes-dashboard-amd64@sha256:0ae6b69432e78069c5ce2bcde0fe409c5c4d6f0f4d9cd50a17974fea38898747",
+                            "k8s.gcr.io/kubernetes-dashboard-amd64:v1.10.1"
+                        ],
+                        "sizeBytes": 121711221
+                    },
+                    {
+                        "names": [
+                            "prom/prometheus@sha256:0283ae2509e1ccc71830edf382713cc3906aa55ca9418c50911854223829bf0b",
+                            "prom/prometheus:v2.3.1"
+                        ],
+                        "sizeBytes": 118818909
+                    }
+                ],
+                "nodeInfo": {
+                    "architecture": "amd64",
+                    "bootID": "d6d90ad1-8096-494b-a807-2ac7cf2d663b",
+                    "containerRuntimeVersion": "docker://18.9.7",
+                    "kernelVersion": "4.14.137+",
+                    "kubeProxyVersion": "v1.13.7-gke.24",
+                    "kubeletVersion": "v1.13.7-gke.24",
+                    "machineID": "a1f3a57f81ea5f9a459014c074a50863",
+                    "operatingSystem": "linux",
+                    "osImage": "Container-Optimized OS from Google",
+                    "systemUUID": "A1F3A57F-81EA-5F9A-4590-14C074A50863"
+                }
+            }
+        }
+    ]
+}
