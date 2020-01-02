@@ -24,10 +24,14 @@ cp bin/* ~/repos/github/fbrubbo/kubectl-snapshot/bin
 # 1. ./install.sh
 # 2. git push
 # 4. create new release in github
-# 5. replace all 'uri' and 'sha256' entries in snapshot.yaml
-# 6. git push (just to have the new uri and sha256 saved)
+# 5. get the sha256 hash using https://emn178.github.io/online-tools/sha256_checksum.html
+# 6. replace all 'uri' and 'sha256' entries in snapshot.yaml
 # 7. kubectl krew install --manifest=snapshot.yaml
 # 8. kubectl snapshot -v
-# 8. submite a pull request to https://github.com/kubernetes-sigs/krew-index
+# 9. git push (just to have the new uri and sha256 saved)
+
+
+# TO DEPLOY ON KREW
+# 1. submite a pull request to https://github.com/kubernetes-sigs/krew-index using snapshot.yaml content
 
 

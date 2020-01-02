@@ -11,8 +11,8 @@ import (
 	"time"
 )
 
-const version = "0.1.0"
-const versionDesciption = "Initial Version"
+const version = "0.1.2"
+const versionDesciption = "First krew plugin version"
 
 // TODO: sort-by ? How to handle the below scenarios?
 func main() {
