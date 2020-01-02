@@ -3,7 +3,7 @@ kind: Plugin
 metadata:
   name: snapshot
 spec:
-  version: "v0.1.0"
+  version: "v0.1.1"
   platforms:
 
   - selector:
@@ -15,6 +15,8 @@ spec:
     files:
     - from: "kubectl-snapshot-*/bin/kubectl-snapshot-linux-amd64"
       to:  "."
+    - from: "kubectl-snapshot-*/LICENSE"
+      to: "."
     bin: "./kubectl-snapshot-linux-amd64"
   - selector:
       matchLabels:
@@ -25,6 +27,8 @@ spec:
     files:
     - from: "kubectl-snapshot-*/bin/kubectl-snapshot-linux-386"
       to:  "."
+    - from: "kubectl-snapshot-*/LICENSE"
+      to: "."      
     bin: "./kubectl-snapshot-linux-386"
 
   - selector:
@@ -36,6 +40,8 @@ spec:
     files:
     - from: "kubectl-snapshot-*/bin/kubectl-snapshot-darwin-amd64"
       to:  "."
+    - from: "kubectl-snapshot-*/LICENSE"
+      to: "."
     bin: "./kubectl-snapshot-darwin-amd64"
   - selector:
       matchLabels:
@@ -46,6 +52,8 @@ spec:
     files:
     - from: "kubectl-snapshot-*/bin/kubectl-snapshot-darwin-386"
       to:  "."
+    - from: "kubectl-snapshot-*/LICENSE"
+      to: "."
     bin: "./kubectl-snapshot-darwin-386"
     
   - selector:
@@ -57,6 +65,8 @@ spec:
     files:
     - from: "kubectl-snapshot-*/bin/kubectl-snapshot-windows-amd64.exe"
       to:  "."
+    - from: "kubectl-snapshot-*/LICENSE"
+      to: "."
     bin: "./kubectl-snapshot-windows-amd64.exe"
   - selector:
       matchLabels:
@@ -67,14 +77,19 @@ spec:
     files:
     - from: "kubectl-snapshot-*/bin/kubectl-snapshot-windows-386.exe"
       to:  "."
+    - from: "kubectl-snapshot-*/LICENSE"
+      to: "."
     bin: "./kubectl-snapshot-windows-386.exe"    
 
   shortDescription: >-    
-    Takes a snapshot of your cluster and print it in either standard io or csv files
+    Prints a snapshot of nodes, pods and HPAs resource usage
   homepage: https://github.com/fbrubbo/kubectl-snapshot
-  caveats: |
-    This plugin a snapshot of pods, hpas, deployments without hpas and 
-    nodes. 
+  description: |
+    This plugin takes a snapshot of resources (ie. cpu and memory) usage for 
+    pods, HPAs, deployments without HPA and nodes. Other best configuration 
+    practices, such as Pod Disruption Budget, probes and etc are also included. 
+    This is specialy useful to understand, at scale, what you have configured 
+    in your cluster. 
 
     Usage:
       kubectl snapshot
@@ -82,3 +97,6 @@ spec:
 
     Other fine tunning are allowed, to understand more type:
       kubectl snapshot -h
+  caveats: |
+    Find more details in the documentation:
+      https://github.com/fbrubbo/kubectl-snapshot
