@@ -11,7 +11,7 @@ spec:
         os: linux
         arch: amd64
     uri: https://github.com/fbrubbo/kubectl-snapshot/archive/v0.1.2.tar.gz
-    sha256: "df1e293d28130d5a02f9f057fca84f7f3abc2d39e01ff4883d54284aca9c9aab"
+    sha256: "3a9cb891eb3d0b20aa42d94c139ac27c6b44ecf9d42c8e844d3ea6c7dc267d20"
     files:
     - from: "kubectl-snapshot-*/bin/kubectl-snapshot-linux-amd64"
       to:  "."
@@ -23,7 +23,7 @@ spec:
         os: linux
         arch: 386
     uri: https://github.com/fbrubbo/kubectl-snapshot/archive/v0.1.2.tar.gz
-    sha256: "df1e293d28130d5a02f9f057fca84f7f3abc2d39e01ff4883d54284aca9c9aab"
+    sha256: "3a9cb891eb3d0b20aa42d94c139ac27c6b44ecf9d42c8e844d3ea6c7dc267d20"
     files:
     - from: "kubectl-snapshot-*/bin/kubectl-snapshot-linux-386"
       to:  "."
@@ -36,7 +36,7 @@ spec:
         os: darwin
         arch: amd64
     uri: https://github.com/fbrubbo/kubectl-snapshot/archive/v0.1.2.tar.gz
-    sha256: "df1e293d28130d5a02f9f057fca84f7f3abc2d39e01ff4883d54284aca9c9aab"
+    sha256: "3a9cb891eb3d0b20aa42d94c139ac27c6b44ecf9d42c8e844d3ea6c7dc267d20"
     files:
     - from: "kubectl-snapshot-*/bin/kubectl-snapshot-darwin-amd64"
       to:  "."
@@ -48,7 +48,7 @@ spec:
         os: darwin
         arch: 386
     uri: https://github.com/fbrubbo/kubectl-snapshot/archive/v0.1.2.tar.gz
-    sha256: "df1e293d28130d5a02f9f057fca84f7f3abc2d39e01ff4883d54284aca9c9aab"
+    sha256: "3a9cb891eb3d0b20aa42d94c139ac27c6b44ecf9d42c8e844d3ea6c7dc267d20"
     files:
     - from: "kubectl-snapshot-*/bin/kubectl-snapshot-darwin-386"
       to:  "."
@@ -61,7 +61,7 @@ spec:
         os: windows
         arch: amd64
     uri: https://github.com/fbrubbo/kubectl-snapshot/archive/v0.1.2.tar.gz
-    sha256: "df1e293d28130d5a02f9f057fca84f7f3abc2d39e01ff4883d54284aca9c9aab"
+    sha256: "3a9cb891eb3d0b20aa42d94c139ac27c6b44ecf9d42c8e844d3ea6c7dc267d20"
     files:
     - from: "kubectl-snapshot-*/bin/kubectl-snapshot-windows-amd64.exe"
       to:  "."
@@ -73,7 +73,7 @@ spec:
         os: windows
         arch: 386
     uri: https://github.com/fbrubbo/kubectl-snapshot/archive/v0.1.2.tar.gz
-    sha256: "df1e293d28130d5a02f9f057fca84f7f3abc2d39e01ff4883d54284aca9c9aab"
+    sha256: "3a9cb891eb3d0b20aa42d94c139ac27c6b44ecf9d42c8e844d3ea6c7dc267d20"
     files:
     - from: "kubectl-snapshot-*/bin/kubectl-snapshot-windows-386.exe"
       to:  "."
