@@ -25,10 +25,10 @@ cp bin/* ~/repos/github/fbrubbo/kubectl-snapshot/bin
 # 2. git push
 # 4. create new release in github
 # 5. get the sha256 hash using https://emn178.github.io/online-tools/sha256_checksum.html
-# 6. replace all 'uri' and 'sha256' entries in snapshot.yaml
-# 7. kubectl krew uninstall snapshot
-# 8. kubectl krew install --manifest=snapshot.yaml
-# 9. kubectl snapshot -v
+# 6. replace all 'uri' and 'sha256' entries in resource-snapshot.yaml
+# 7. kubectl krew uninstall resource-snapshot
+# 8. kubectl krew install --manifest=resource-snapshot.yaml
+# 9. kubectl resource-snapshot -v
 # 10. git push (just to have the new uri and sha256 saved)
 
 

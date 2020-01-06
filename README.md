@@ -1,41 +1,49 @@
-# Take Cluster Snapshots
+# kubectl resource-snapshot
 
-To start using this plugins, execute the following command:
+This plugin takes a snapshot of resources (ie. cpu and memory) usage for 
+pods, HPAs, deployments without HPA and nodes. Other best configuration 
+practices, such as Pod Disruption Budget, probes and etc are also included.
+
+This is specialy useful to understand, at scale, what you have configured 
+in your cluster
+
+## Isntallation
+
+Use [krew](https://github.com/kubernetes-sigs/krew) plugin manager to install
 
 ```bash
-git clone https://github.com/fbrubbo/kubectl-snapshot.git
-export PATH=$PATH:$(pwd)/kubectl-snapshot
-kubectl snapshot -h
+kubectl krew install resource-snapshot
+kubectl resource-snapshot -h
 ```
 
-## kubectl snapshot
+## Take cluster resource snapshots
 
 **Disclaimer: this pluting uses *kubectl top* to get cpu and memory usage. That means, this plugin does not consider historical data.**
 
 To take a snapshot of pods, hpas, deployments without hpas and nodes
 
 ```bash
-kubectl snapshot
+kubectl resource-snapshot
 ```
 
 You can also filter by namespace, deployment or pod (or a mix of them if you wil)
 
 ```bash
-kubectl snapshot -n my-ns
-kubectl snapshot -d my-deployment
-kubectl snapshot -p my-pod
+kubectl resource-snapshot -n my-ns
+kubectl resource-snapshot -d my-deployment
+kubectl resource-snapshot -p my-pod
 ```
 
 To check parameter option, type:
 
 ```bash
-kubectl snapshot -h
+kubectl resource-snapshot -h
 ```
 
 The default behaviour of this plugin is to print the output in the stdio, if you would like to generate csv files to import it to a spreadsheet use:
 
 ```bash
-kubectl snapshot -csv-output <NAME>
+kubectl resource-snapshot -csv-output <NAME>
 ```
 
 The above command will generate 4 files
@@ -76,27 +84,3 @@ The above command will generate 4 files
 7. Use the **pods** sheet for fine tunning
 
 Note that this is only a suggetion, you can do many other similar analysis to improve the usage of your cluster and, consequently, reduce your costs.
-
-## kubectl snapshot hpas
-
-Shortcut for
-
-```bash
-kubectl snapshot -print hpas
-```
-
-## kubectl snapshot nodes
-
-Shortcut for
-
-```bash
-kubectl snapshot -print nodes
-```
-
-## kubectl snapshot pods
-
-Shortcut for
-
-```bash
-kubectl snapshot -print pods
-```
