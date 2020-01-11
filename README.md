@@ -12,6 +12,7 @@ in your cluster
 Use [krew](https://github.com/kubernetes-sigs/krew) plugin manager to install
 
 ```bash
+kubectl krew update
 kubectl krew install resource-snapshot
 kubectl resource-snapshot -h
 ```
