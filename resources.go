@@ -158,20 +158,23 @@ func (p Pod) findStatusCondition(test func(Condition) bool) Condition {
 
 //senninha-quotation-redis-slave-0
 // zoidberg-pentaho-report-1572104400-rklgx
-const stafulsetPattern = `(.*)-(\d*)`
-const deploymentPattern = `(.*)-([^-]*)-([^-]*)`
-const jobPattern = `(.*)-([^-]*)`
+const stafulsetPattern = `^(.*)-(\d*)$`
+const deploymentPattern = `^(.*)-([^-]*)-([^-]*)$`
+const jobPattern = `^(.*)-([^-]*)$`
+const unknownPattern = `^(.*)$`
 
 // GetDeploymentName should work for most of the cases
 func (p Pod) GetDeploymentName() string {
 	name := p.Metadata.Name
 	var reg *regexp.Regexp
-	if match, _ := regexp.MatchString(deploymentPattern, name); match {
-		reg, _ = regexp.Compile(deploymentPattern)
-	} else if match, _ := regexp.MatchString(stafulsetPattern, name); match {
+	if match, _ := regexp.MatchString(stafulsetPattern, name); match {
 		reg, _ = regexp.Compile(stafulsetPattern)
+	} else if match, _ := regexp.MatchString(deploymentPattern, name); match {
+		reg, _ = regexp.Compile(deploymentPattern)
 	} else if p.Metadata.OwnerReferences != nil && p.Metadata.OwnerReferences[0].Kind == "Job" {
 		reg, _ = regexp.Compile(jobPattern)
+	} else {
+		reg, _ = regexp.Compile(unknownPattern)
 	}
 	result := reg.FindStringSubmatch(name)
 	return result[1]

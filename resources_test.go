@@ -54,8 +54,10 @@ func TestGetDeploymentName(t *testing.T) {
 		expected string
 	}
 	tests := []testPodResource{
+		testPodResource{res: Pod{Metadata: Metadata{Name: "stateful-job-1"}}, expected: "stateful-job"},
 		testPodResource{res: Pod{Metadata: Metadata{Name: "shippingservice-545f46fb7f-f4c5b"}}, expected: "shippingservice"},
 		testPodResource{res: Pod{Metadata: Metadata{Name: "shipping-service-545f46fb7f-f4c5b"}}, expected: "shipping-service"},
+		testPodResource{res: Pod{Metadata: Metadata{Name: "forset"}}, expected: "forset"},
 	}
 
 	log.Infof("%+v", tests)
