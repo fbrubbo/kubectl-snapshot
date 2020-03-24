@@ -20,7 +20,7 @@ cp ./sh/* ./bin/
 # TO TEST LOCALLY
 # 1. ./install.sh
 # 2. git add -A && git commit -m "Message: #issue" && git push
-# 4. create new release in github
+# 4. create new release in github and download the Source tar.gz
 # 5. get the sha256 hash using https://emn178.github.io/online-tools/sha256_checksum.html
 # 6. replace all 'uri' and 'sha256' entries in resource-snapshot.yaml
 # 7. kubectl krew uninstall resource-snapshot
