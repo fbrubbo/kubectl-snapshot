@@ -1,3 +1,7 @@
+set -e
+
+go test
+
 for GOOS in darwin linux windows; do
   for GOARCH in 386 amd64; do
     output_name="bin/kubectl-snapshot-$GOOS-$GOARCH"
@@ -31,6 +35,9 @@ cp ./sh/* ./bin/
 
 
 # TO DEPLOY ON KREW
-# 1. submite a pull request to https://github.com/kubernetes-sigs/krew-index using snapshot.yaml content
+# 1. submite a pull request to https://github.com/kubernetes-sigs/krew-index using resource-snapshot.yaml content
+# 2. kubectl krew uninstall resource-snapshot
+# 3. kubectl krew update
+# 4. kubectl krew install resource-snapshot
 
 
