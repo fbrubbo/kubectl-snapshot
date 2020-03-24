@@ -16,13 +16,10 @@ done
 chmod +x ./sh/*
 cp ./sh/* ./bin/
 
-mkdir -p ~/repos/github/fbrubbo/kubectl-snapshot/bin
-cp bin/* ~/repos/github/fbrubbo/kubectl-snapshot/bin
-
 
 # TO TEST LOCALLY
 # 1. ./install.sh
-# 2. git push
+# 2. git add -A && git commit -m "Message: #issue" && git push
 # 4. create new release in github
 # 5. get the sha256 hash using https://emn178.github.io/online-tools/sha256_checksum.html
 # 6. replace all 'uri' and 'sha256' entries in resource-snapshot.yaml

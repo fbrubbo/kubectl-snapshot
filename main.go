@@ -11,8 +11,8 @@ import (
 	"time"
 )
 
-const version = "0.1.2"
-const versionDesciption = "First krew plugin version"
+const version = "0.1.3"
+const versionDesciption = "Small change to improve get deployment name method"
 
 // TODO: sort-by ? How to handle the below scenarios?
 func main() {

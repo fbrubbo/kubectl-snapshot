@@ -158,12 +158,13 @@ func (p Pod) findStatusCondition(test func(Condition) bool) Condition {
 
 //senninha-quotation-redis-slave-0
 // zoidberg-pentaho-report-1572104400-rklgx
-const stafulsetPattern = `^(.*)-(\d*)$`
-const deploymentPattern = `^(.*)-([^-]*)-([^-]*)$`
+const stafulsetPattern = `^(.*)-(\d+)$`
+const deploymentPattern = `^(.*)-([^-]*)-([^-]+)$`
 const jobPattern = `^(.*)-([^-]*)$`
 const unknownPattern = `^(.*)$`
 
 // GetDeploymentName should work for most of the cases
+// This best effort logic avoid lazy loading objects, but may fall into unknownPattern on corner cases
 func (p Pod) GetDeploymentName() string {
 	name := p.Metadata.Name
 	var reg *regexp.Regexp
