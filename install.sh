@@ -26,7 +26,8 @@ cp ./sh/* ./bin/
 # 7. kubectl krew uninstall resource-snapshot
 # 8. kubectl krew install --manifest=resource-snapshot.yaml
 # 9. kubectl resource-snapshot -v
-# 10. git push (just to have the new uri and sha256 saved)
+# 10. kubectl krew uninstall resource-snapshot
+# 10. git add -A && git commit -m "v0.1.3" && git push (just to have the new uri and sha256 saved)
 
 
 # TO DEPLOY ON KREW
